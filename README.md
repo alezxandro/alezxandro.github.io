@@ -5,3 +5,7 @@ fel: daje rega, forza giuve, siuuuum, e viva l'ucraina che è un bel posto, più
 pop: Felici non fare il gay 
 
 fel: popa ti sgozzo
+
+fel: funziona quello che cazzo sto facendo? godo? non godo?
+
+fel: godo porcodd*o
