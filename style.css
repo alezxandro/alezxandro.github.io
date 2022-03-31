@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+:root {
+    --color1: #cac96c;
+    /* bianco sporco */
+    --color2: #000080;
+    /* blu navy marittimo */
+    --clemente: #1d692d;
+    /* rosmarellino */
+}
+
+
+/* ao spengo tutto io, buonanotte gheo, bella popa, basile non leggerà mai questo messaggio */
+
+
+/*gli si addice come colore in effetti (colore rosmarino)(rosmellino)*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-size: 1.20rem;
+    line-height: 2rem;
+    color: var(--color2);
+}
+
+.main-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 0 20px;
+}
+
+.article-title {
+    padding-left: 20px;
+    margin-bottom: 2rem;
+}
+
+.article-title h1 {
+    margin-top: 1.75rem;
+    text-align: left;
+}
+
+.article-section {
+    border: 1px solid black;
+    padding: 0 20px;
+}
+
+.paragraph {
+    margin: 2rem 0;
+}
+
+.salvini {
+    display: block;
+    margin: 0 auto;
+}
