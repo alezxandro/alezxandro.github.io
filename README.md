@@ -7,3 +7,5 @@ pop: Felici non fare il gay
 fel: popa ti sgozzo
 
 fel: funziona quello che cazzo sto facendo? godo? non godo?
+
+fel: godo porcodd*o
