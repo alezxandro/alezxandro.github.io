@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&family=Poppins:wght@300;400&display=swap');
 :root {
     --color1: #cac96c;
     /* bianco sporco */
@@ -6,6 +7,16 @@
     /* blu navy marittimo */
     --clemente: #1d692d;
     /* rosmarellino */
+    --rosomeli: #a97db1;
+    
+    --blucraino: #1e00ff;
+    --giallucraino: #eeff00;
+
+    --Mist: #90AFC5;
+    --Stone: #4c768a74;
+    --Shadow: #2A3132;
+    --light-theme: #ffffff;
+    --dark-theme: #1f1f1f;
 }
 
 
@@ -21,8 +32,9 @@
 }
 
 body {
-    background-color: antiquewhite;
-    font-family: 'Poppins', sans-serif;
+    /* background-color: rgba(174, 189, 199, 0.512); */
+    background-color: var(--light-theme);
+    font-family: 'Kanit', sans-serif;
 }
 
 p {
@@ -38,26 +50,82 @@ p {
     padding: 0 20px;
 }
 
+.navbar {
+    width: 100%;
+    
+}
+
+.navbar-ul {
+    
+    min-height: 3rem;
+    background-color: var(--Mist);/* bar color */
+    /* margin: 0 2rem; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    justify-content: center;/* NavBar object center */
+    /* padding-left: 2rem; */
+
+} 
+
+.navbar-ul > .navbar-item > a {
+    line-height: 3rem;
+    /*background-color: var(--Stone);*/
+    padding: 0 1rem;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    margin-left: 10px;
+    display: block;
+    
+}
+.navbar-item > a:hover{
+    background-color: var(--Stone);
+    /* Tempo di interazione */
+    -webkit-transition: all 0.3s 0s ease;
+    -moz-transition: all 0.3s 0s ease;
+    -o-transition: all 0.3s 0s ease;
+    transition: all 0.3s 0s ease;
+    font-weight: 1000;
+    color: var(--Shadow);
+} 
+
 .article-title {
-    padding-left: 20px;
+    padding-left: 2rem;
     margin-bottom: 2rem;
 }
 
 .article-title h1 {
+    font-size: 3rem;
     margin-top: 1.75rem;
     text-align: left;
 }
 
 .article-section {
     border: 1px solid black;
-    padding: 0 20px;
+    padding: 0 2rem;
+}
+
+.paragraph-title {
+    margin-top: 1.5rem ;
+    font-size: 2rem;
 }
 
 .paragraph {
     margin: 2rem 0;
 }
 
-.salvini {
+/* .salvini {
     display: block;
     margin: 0 auto;
+} */
+
+.img-container {
+    width: 100%;
+}
+
+.img-container img {
+    display: block;
+    margin: 2rem auto;
 }
