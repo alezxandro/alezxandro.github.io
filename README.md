@@ -9,3 +9,5 @@ fel: popa ti sgozzo
 fel: funziona quello che cazzo sto facendo? godo? non godo?
 
 fel: godo porcodd*o
+
+fel: v'ho messo il file del testo della pace .docx consegnatomi da Boggy su whatsapp
