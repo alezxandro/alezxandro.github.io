@@ -6,7 +6,11 @@ titles = Array.from(titles);
 
 titles.forEach (element => {
     let a = document.createElement("a");
+    let li = document.createElement("li");
+    li.classList.add("navbar-item");
+
     a.innerHTML = element.innerHTML;
     a.href = element.id;
-    titlesToc.appendChild(a);
+    li.appendChild(a);
+    titlesToc.appendChild(li);
 })
