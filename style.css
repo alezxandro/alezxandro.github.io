@@ -21,8 +21,8 @@
 
 
     /* header */
-    --h1-font-size: 3rem;
-    --h2-font-size: var(--2rem);
+    --h1-font-size: 3.5rem;
+    --h2-font-size: 2.25rem;
     --h3-font-size: 1.5rem;
     /* --h4-font-size: 3rem; */
 
@@ -50,6 +50,7 @@ p {
     font-size: 1.20rem;
     line-height: var(--2rem);
     color: black;
+    margin-bottom: 1rem;
 }
 
 .main-container {
@@ -139,18 +140,27 @@ p {
     margin: var(--2rem) 0;
 } */
 
+.paragraph {
+    border-top: 1px solid black;
+    
+}
 /* .salvini {
     display: block;
     margin: 0 auto;
 } */
 
 .img-container {
-    width: 100%;
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+}
+img {
+    width: 60%;
 }
 
 .img-container img {
     display: block;
-    margin: var(--2rem) auto;
+    /* margin: var(--2rem) auto; */
 }
 
 /* h4 {
