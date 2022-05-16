@@ -1,6 +1,8 @@
 let titles = document.querySelectorAll(".paragraph-title");
 
-let titlesToc = document.querySelector(".titles-toc");
+let linksToc = document.querySelector(".links-toc");
+
+let toc = document.querySelector(".toc-navbar");
 
 titles = Array.from(titles);
 
@@ -14,5 +16,8 @@ titles.forEach (element => {
     a.innerHTML = element.innerHTML;
     a.href = "#" + element.id;
     li.appendChild(a);
-    titlesToc.appendChild(li);
+    linksToc.appendChild(li);
+    
 })
+
+toc.style.display = "block";
