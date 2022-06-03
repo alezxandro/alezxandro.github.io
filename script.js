@@ -1,12 +1,19 @@
-let titles = document.querySelectorAll(".paragraph-title");
 
-let linksToc = document.querySelector(".links-toc");
 
-let toc = document.querySelector(".toc-navbar");
 
-titles = Array.from(titles);
 
-titles.forEach (element => {
+
+
+
+let tocs = document.querySelectorAll(".toc-navbar");
+
+tocs.forEach(element => {
+    console.log(element);
+    let titles = element.parentElement.parentElement.querySelectorAll(".paragraph-title");
+    let linksToc = element.querySelector(".links-toc");
+    titles = Array.from(titles);
+    console.log(titles);
+    titles.forEach (element => {
     let a = document.createElement("a");
     let li = document.createElement("li");
     // li.classList.add("navbar-item");
@@ -17,7 +24,12 @@ titles.forEach (element => {
     a.href = "#" + element.id;
     li.appendChild(a);
     linksToc.appendChild(li);
-    
-})
+   
+    })
 
-toc.style.display = "block";
+    element.style.display = "block";
+    
+});
+
+
+

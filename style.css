@@ -1,21 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&family=Poppins:wght@300;400&display=swap');
 :root {
-    --color1: #cac96c;
-    /* bianco sporco */
-    --color2: #000080;
-    /* blu navy marittimo */
-    --clemente: #1d692d;
-    /* rosmarellino */
-    --rosomeli: #a97db1;
-    
-    --blucraino: #1e00ff;
-    --giallucraino: #eeff00;
 
     --Mist: #90AFC5;
     --Stone: #4c768a74;
     --Shadow: #2A3132;
-    --light-theme: #ffffff;
+    --light-theme: #fdfdfd;
     --dark-theme: #1f1f1f;
     --2rem: 2rem;
 
@@ -28,11 +18,11 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
-/* ao spengo tutto io, buonanotte gheo, bella popa, basile non leggerà mai questo messaggio */
 
-
-/*gli si addice come colore in effetti (colore rosmarino)(rosmellino)*/
 
 * {
     margin: 0;
@@ -56,19 +46,94 @@ p {
 }
 
 .main-container {
+    width: 1200px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto ;
     min-height: 100vh;
     /* padding: 0 20px; */
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    background-color: var(--light-theme);
+    
 }
+
+.tab-content {
+    /* margin-top: 3rem; */
+    width: 100%;
+    display: none;
+    opacity: 0;
+    background-color: var(--light-theme);
+    box-shadow: -1px 2px 2px grey, 1px 0px 2px grey;
+    transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
+}
+
+.tab-radio {
+    display: none;
+}
+
+.tabs {
+    margin-top: var(--2rem);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
+}
+
+.tab-label {
+    display: block;
+    padding: 14px 16px;
+    width: 50%;
+    text-align: center;
+    background-color: var(--Mist);
+    cursor: pointer;
+    box-shadow: 0px 1px 2px grey;
+}
+
+.tab-label:hover {
+    background-color: lightblue;
+    transition: 0.25s ease;
+}
+
+.tab-radio:checked + label {
+    background-color: var(--light-theme);
+    cursor: default;
+    
+}
+
+.tab-radio:checked:nth-of-type(1) + label {
+    box-shadow: -1px -1px 2px 0px grey, inset -1px 0px 2px 0px grey;
+}
+
+.tab-radio:checked:nth-of-type(2) + label {
+    box-shadow: 1px -1px 2px 0px grey, inset 1px 0px 2px 0px grey;
+}
+
+
+
+
+.tab-radio:checked:nth-of-type(1) ~ .tab-content:nth-of-type(1), 
+.tab-radio:checked:nth-of-type(2) ~ .tab-content:nth-of-type(2) {
+    display: block;
+    opacity:1;
+    /* transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease; */
+    
+}
+
+
 
 .navbar {
 
-    position: relative;
+    /* position: relative; */
     min-height: 3rem;
     background-color: var(--Mist);
-    
+    -webkit-transition: all 0.5s 0s ease;
+    -moz-transition: all 0.5s 0s ease;
+    -o-transition: all 0.5s 0s ease;
+    transition: all 0.5s 0s ease;
+    position: sticky;
+    top: 0px;
+    width: inherit;
+    /* margin-bottom: 4rem; */
+    /* margin: 0 2rem 0 0  ; */
     
 }
 
@@ -87,11 +152,12 @@ p {
 
 /* .navbar-ul > .navbar-item > */ a {
     line-height: 3rem;
+    height: 100%;
     /*background-color: var(--Stone);*/
     /* padding: 0 1rem; */
     text-decoration: none;
     color: black;
-    font-size: 16px;
+    font-size: 18px;
     /* margin-left: 10px; */
     /* display: block; */
     
@@ -104,6 +170,7 @@ p {
     -o-transition: all 0.3s 0s ease;
     transition: all 0.3s 0s ease;
     padding: 0 1rem;
+    background-color: inherit;
 }
 .navbar-item > a:hover{
     background-color: var(--Stone);
@@ -159,6 +226,7 @@ p {
     /* width: 100%; */
     display: flex;
     justify-content: center;
+    margin: var(--2rem) 0;
     
 }
 .img-container img {
@@ -239,7 +307,31 @@ ol {
     display: none;
 }
 
-@media screen and (max-width: 768px)  {
+.google-translate-container {
+    /* margin-top: 3rem; */
+    display: flex;
+    justify-content: center;
+}
+
+.goog-te-combo {
+    width: 250px;
+    height: 2.5rem;
+    font-size: 20px;
+}
+
+.goog-te-gadget {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#google_translate_element {
+    width: 70%;
+}
+
+
+
+@media screen and (max-width: 1200px)  {
 
     .main-container {
         width: 100%;
@@ -247,18 +339,32 @@ ol {
     }
 
     .toc-navbar {
-        width: auto;
+        width: 100%;
 
-        /* margin: 0; */
+        margin: 0;
+    }
+
+    .toc-container {
+        width: auto;
+    }
+    
+    .mg-2rem-x {
+        margin: 0 1rem;
     }
 
     .pd-20-x {
         padding: 0 10px;
     }
 
+    .pd-2rem-x {
+        padding: 0 1rem;
+    }
+
     .img-container img {
         width: 100%;
     }
+
+    
 
     .toggler {
         display: block;
@@ -277,45 +383,101 @@ ol {
         /* position: relative; */
         margin-left: 20px;
         z-index: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
     }
 
     .hamburger > div {
-        width: 100%;
-        background-color: #1f1f1f;
+        width: 2rem;
+        background-color: #464646;
         height: 3px;
         position: relative;
         margin: auto 0;
     }
 
-    .hamburger::before {
+    .hamburger >div::before {
         content: '';
         position: absolute;
-        top: -1rem;
-        width: 3rem;
+        top: -10px;
+        width: 2rem;
         height: 3px;
-        background-color: #1f1f1f;
+        background-color: #464646;
     }
 
-    .hamburger::after {
+    .hamburger> div::after {
         content: '';
         position: absolute;
-        top: 1rem;
-        width: 3rem;
+        top: 10px;
+        width: 2rem;
         height: 3px;
-        background-color: #1f1f1f;
+        background-color: #464646;
 
 
     }
 
-    .toggler:checked ~ .navbar {
-        background-color: #1f1f1f;
+    .toggler:checked + .hamburger > div{
+        transform: rotate(135deg);
+        
+        transition: 0.5s;
+    }
+
+    .toggler:checked + .hamburger > div::after{
+        transform: rotate(90deg);
+        top: 0;
+        transition: 0.25s;
+    }
+    
+    .toggler:checked + .hamburger > div:before {
+        transform: rotate(90deg);
+        top: 0;
+        transition: 0.25s;
+    }
+
+    .toggler:checked ~ .navbar-ul {
+        display: block;
+        /* background-color: #1f1f1f; */
+        
     }
 
     .navbar-ul {
         display: none;
+        
     }
 
+    .navbar-ul > .navbar-item > a {
+        
+        padding: 0 25px;
+        /* background-color: inherit; */
+    }
+
+    .navbar-item > a:hover{
+        padding: 0 var(--2rem);
+    } 
+
+
+    .article-title h1 {
+        font-size: 2.75rem;
+    }
+
+    .paragraph-title {
+        font-size: 2rem;
+    }
+
+    .paragraph-subtitle-2 {
+        font-size: 1.25rem;
+    }
+
+    .goog-te-combo {
+        width: 100%;
+    }
+
+    #\:0\.targetLanguage {
+        width: 100%;
+        max-width: 320px;
+    }
 
     
 }
