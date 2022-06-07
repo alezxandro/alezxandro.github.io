@@ -45,6 +45,12 @@ p {
     margin-bottom: 1rem;
 }
 
+.paragraph ul {
+    font-size: 1.20rem;
+    list-style-position: inside;
+    margin-bottom: 1rem;
+}
+
 .main-container {
     width: 1200px;
     max-width: 1200px;
